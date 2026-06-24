@@ -1,0 +1,1 @@
+import{d as t,a as o,r as s,b as a,e as r,o as n}from"./index-BPiHofqO.js";const d={style:{"background-color":"#d2d2fa",height:"100vh",display:"grid","place-items":"center"}},p=t({__name:"HomeView",setup(c){return o(()=>{s.push("/")}),(i,e)=>(n(),a("div",d,[...e[0]||(e[0]=[r("h2",{style:{"text-align":"center"}},"正在跳转到主页... ",-1)])]))}});export{p as default};
