@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {defineEmits, onMounted, ref} from 'vue';
+import {onMounted, ref} from 'vue';
 import http from '@/utils/axios.js';
 import {apiUserList, apiUserSessionList} from "@/api/chat";
 import UserInfoShow from "@/components/chat/components/UserInfoShow.vue";
@@ -102,7 +102,7 @@ const handleCurrentChange = (val: User | undefined) => {
           <el-tooltip class="item" effect="light" placement="right">
             <div slot="content" class="tips">
               <span>{{ gen_show_name(row) }}</span> <br>
-              <span v-if="row.nTime" style="color: #909399; font-size: 12px;">{{ row.nTime }}</span>
+              <span v-if="row.nTime" style="color: #606266; font-size: 12px;">{{ row.nTime }}</span>
             </div>
             <template #content>
               <user-info-show :userinfo="row" :show_all="false" style="max-width: 600px"></user-info-show>

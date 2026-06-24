@@ -555,16 +555,16 @@ onUnmounted(() => {
         <div class="sticky-stats" style="margin-bottom: 15px; padding: 10px; background-color: #f0f9ff; border-radius: 5px; border-left: 4px solid #409eff;">
         <div style="display: flex; justify-content: space-between; align-items: center;">
           <div>
-            <span style="color: #666;">当前筛选：</span>
+            <span style="color: #4a4a4a;">当前筛选：</span>
             <el-tag type="info" size="small" style="margin: 0 5px;">
               {{ filterOptions.find(opt => opt.value === filterType)?.label || '全部' }}
             </el-tag>
-            <span style="color: #666;">共 {{ filteredContacts.length }} 个联系人</span>
+            <span style="color: #4a4a4a;">共 {{ filteredContacts.length }} 个联系人</span>
             <span v-if="selectedContacts.length > 0" style="color: #67c23a; margin-left: 10px;">
               （已选择 {{ selectedContacts.length }} 个）
             </span>
           </div>
-          <div v-if="filteredContacts.length > 0" style="color: #909399; font-size: 12px;">
+          <div v-if="filteredContacts.length > 0" style="color: #606266; font-size: 12px;">
             消息数量范围：{{ Math.min(...filteredContacts.map(c => contactMsgCounts[c.wxid] || 0)) }} - {{ Math.max(...filteredContacts.map(c => contactMsgCounts[c.wxid] || 0)) }}
           </div>
         </div>
@@ -576,7 +576,7 @@ onUnmounted(() => {
           :percentage="exportProgress" 
           :status="exportProgress === 100 ? 'success' : undefined"
         />
-        <div style="margin-top: 10px; color: #666;">{{ exportStatus }}</div>
+        <div style="margin-top: 10px; color: #4a4a4a;">{{ exportStatus }}</div>
         </div>
       </div>
 
@@ -624,7 +624,7 @@ onUnmounted(() => {
         <el-table-column label="联系人名称" min-width="200">
           <template #default="{ row }">
             <div style="font-weight: bold;">{{ gen_show_name(row) }}</div>
-            <div style="font-size: 12px; color: #999;">{{ row.wxid }}</div>
+            <div style="font-size: 12px; color: #606266;">{{ row.wxid }}</div>
           </template>
         </el-table-column>
         
@@ -696,7 +696,7 @@ onUnmounted(() => {
            <!-- 说明信息 -->
       <div>
           <h4 style="margin: 0 0 10px 0; color: #409eff;">使用说明：</h4>
-          <ul style="margin: 0; padding-left: 20px; color: #666;">
+          <ul style="margin: 0; padding-left: 20px; color: #4a4a4a;">
             <li><strong>筛选功能</strong>：支持按类型筛选（全部、公众号、群聊、折叠的群聊、企业服务、微信服务、微信好友）</li>
             <li><strong>搜索功能</strong>：支持按联系人名称搜索</li>
             <li><strong>消息数量过滤</strong>：支持按最小消息数量过滤</li>

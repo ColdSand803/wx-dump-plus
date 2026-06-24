@@ -11,6 +11,13 @@ export default defineConfig(({mode}) => {
     const apiPort = env.VITE_API_PORT
     
     return {
+    css: {
+        preprocessorOptions: {
+            scss: {
+                api: "modern-compiler"
+            }
+        }
+    },
     plugins: [
         vue(),
         vueJsx(),

@@ -48,7 +48,7 @@ onMounted(() => {
     <div v-if="!isDbInit && !showInitComponent" style="text-align: center;">
       <h2 style="margin-bottom: 30px;">欢迎使用<a href="https://github.com/baiyajin/wx-dump-plus">wx-dump-plus</a>聊天记录查看工具!</h2>
       <p style="margin-bottom: 20px; font-size: 16px;">当前版本：{{ version }}</p>
-      <p style="margin-bottom: 30px; color: #666;">请先进行数据库初始化设置</p>
+      <p style="margin-bottom: 30px; color: #4a4a4a;">请先进行数据库初始化设置</p>
       <el-button type="primary" size="large" @click="showInit">开始初始化</el-button>
     </div>
 
@@ -56,7 +56,7 @@ onMounted(() => {
     <div v-else-if="isDbInit && !showInitComponent" style="text-align: center;">
       <h2 style="margin-bottom: 30px;">欢迎使用<a href="https://github.com/baiyajin/wx-dump-plus">wx-dump-plus</a>聊天记录查看工具!</h2>
       <p style="margin-bottom: 20px; font-size: 16px;">当前版本：{{ version }}</p>
-      <p style="margin-bottom: 30px; color: #28a745;">✅ 数据库已初始化，可以开始使用</p>
+      <p style="margin-bottom: 30px; color: #28a745;"><i class="ri-checkbox-circle-fill"></i> 数据库已初始化，可以开始使用</p>
       <div style="display: flex; gap: 20px; justify-content: center;">
         <el-button type="default" size="large" @click="showInit">重新初始化</el-button>
       </div>

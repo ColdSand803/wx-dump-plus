@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {defineEmits, defineProps, ref} from 'vue';
+import {ref} from 'vue';
 
 // 进度条
 const percentage = ref(0);

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import ChatRecprdsHeader from '@/components/chat/ChatRecprdsHeader.vue';
 import ChatRecordsMain from '@/components/chat/ChatRecordsMain.vue';
-import {ref, defineProps, nextTick, onMounted, watch} from 'vue';
+import {ref, nextTick, onMounted, watch} from 'vue';
 import http from "@/utils/axios.js";
 import ChatExportMain from "@/components/chatBackup/ChatExportMain.vue";
 import {apiMsgCount} from "@/api/chat";

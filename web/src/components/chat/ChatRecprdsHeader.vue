@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {defineEmits, defineProps, nextTick, onMounted, ref, watch} from 'vue';
+import {nextTick, onMounted, ref, watch} from 'vue';
 import http from "@/utils/axios.js";
 import {ElTable, ElNotification, ElMessage, ElMessageBox} from "element-plus";
 import {apiMsgCount, apiMsgCountSolo, apiRealTime, apiUserList} from "@/api/chat";

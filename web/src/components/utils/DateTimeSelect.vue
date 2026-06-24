@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {defineEmits, ref, watch} from 'vue';
+import {ref, watch} from 'vue';
 
 const defaultTime: [Date, Date] = [
   new Date(2000, 1, 1, 0, 0, 0),

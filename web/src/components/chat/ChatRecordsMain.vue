@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {defineProps, ref, onMounted, watch, nextTick, defineExpose} from "vue";
+import {ref, onMounted, watch, nextTick} from "vue";
 import http from '@/utils/axios.js';
 import MessageText from '@/components/chat/message/MessageText.vue';
 import MessageImg from '@/components/chat/message/MessageImg.vue';

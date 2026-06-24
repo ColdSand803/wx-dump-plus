@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import http from "@/utils/axios.js";
 import ProgressBar from "@/components/utils/ProgressBar.vue";
-import {defineEmits, onMounted, ref, watch} from "vue";
+import {onMounted, ref, watch} from "vue";
 import {ElTable, ElTableColumn, ElMessage, ElMessageBox} from "element-plus";
 import type {Action} from 'element-plus'
 import router from "@/router";
@@ -35,21 +35,21 @@ const initOptions = [
     value: 'last',
     title: '使用历史数据',
     description: '使用上次保存的配置和数据',
-    icon: '📁',
+    icon: 'ri-folder-3-fill',
     color: '#409eff'
   },
   {
     value: 'auto',
     title: '自动解密已登录微信',
     description: '自动检测并解密当前登录的微信数据',
-    icon: '🔓',
+    icon: 'ri-lock-unlock-fill',
     color: '#67c23a'
   },
   {
     value: 'custom',
     title: '自定义文件位置',
     description: '手动指定微信数据文件的位置',
-    icon: '⚙️',
+    icon: 'ri-settings-3-fill',
     color: '#e6a23c'
   }
 ];
@@ -402,7 +402,7 @@ watch(init_type, (val) => {
             class="init-radio"
           />
           <div class="init-option-content">
-            <div class="init-option-icon">{{ option.icon }}</div>
+            <div class="init-option-icon"><i :class="option.icon"></i></div>
             <div class="init-option-title">{{ option.title }}</div>
             <div class="init-option-description">{{ option.description }}</div>
           </div>
@@ -526,7 +526,7 @@ watch(init_type, (val) => {
 
 .init-option-description {
   font-size: 14px;
-  color: #7f8c8d;
+  color: #5a6a6c;
   line-height: 1.5;
   flex: 1;
   display: flex;
